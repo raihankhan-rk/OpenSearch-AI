@@ -1,5 +1,7 @@
 # OpenSearch AI
 
+![OpenSearch AI](assets/desktop.png)
+
 OpenSearch AI is an advanced search engine powered by artificial intelligence. This project aims to provide a powerful and intuitive search experience using cutting-edge AI technologies.
 
 ## Project Structure
@@ -76,9 +78,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 For any questions or concerns, please open an issue in this repository or contact the project maintainers.
 
-- [Raihan Khan](https://raihankhan.dev/links)
-- [Sayak Sarkar](https://sayaksarkar.dev/)
-
 ---
 
-Happy searching with OpenSearch AI!
+Built with ❤️ by [Raihan Khan](https://raihankhan.dev/links) and [Sayak Sarkar](https://sayaksarkar.dev/). Happy searching with OpenSearch AI!
