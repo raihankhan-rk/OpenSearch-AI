@@ -1,0 +1,14 @@
+duckduckgo_search==6.2.5
+fastapi==0.111.1
+langchain==0.2.11
+langchain-community==0.2.10
+langchain-core==0.2.25
+langchain-openai==0.1.19
+openai==1.37.1
+pytz==2024.1
+starlette==0.37.2
+uv==0.2.32
+uvicorn==0.30.3
+uvloop==0.19.0
+watchfiles==0.22.0
+hypercorn
