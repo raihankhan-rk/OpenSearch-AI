@@ -3,9 +3,10 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Providers from "@/utils/provider/Providers"
 import { poppins } from "@/utils/font";
+import FooterComp from "@/components/footerComp";
 
 export const metadata: Metadata = {
-  title: "OpenSearch",
+  title: "OpenSearch AI",
   description: "Search boosted by the power of AI",
 };
 
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body className={poppins.className}>
         <Providers>
           {children}
+          <FooterComp/>
         </Providers>
         </body>
     </html>
