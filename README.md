@@ -1,17 +1,17 @@
-# OpenSearch AI Project
+# OpenSearch AI
 
-OpenSearch is an advanced search engine powered by artificial intelligence. This project aims to provide a powerful and intuitive search experience using cutting-edge AI technologies.
+OpenSearch AI is an advanced search engine powered by artificial intelligence. This project aims to provide a powerful and intuitive search experience using cutting-edge AI technologies.
 
 ## Project Structure
 
 The repository is organized into two main folders:
 
 - `frontend/`: Contains the Next.js-based user interface
-- `backend/`: Contains the server-side logic and AI implementation (to be developed)
+- `backend/`: Contains the FastAPI server
 
 ## Frontend
 
-The frontend of OpenSearch is built using Next.js, a popular React framework that enables server-side rendering and generates static websites for React-based web applications.
+The frontend of OpenSearch AI is built using Next.js, a popular React framework that enables server-side rendering and generates static websites for React-based web applications.
 
 ### Setup
 
@@ -36,11 +36,37 @@ To set up the frontend:
 
 ## Backend
 
-The backend is currently under development. This section will be updated with setup instructions and other relevant information as the backend progresses.
+The backend of OpenSearch AI is built using FastAPI, a modern Python web framework that is fast, easy to use, and based on standard Python type hints. The backend server provides an API for the frontend to interact with the search engine. It leverages an OpenAI Tool Calling Agent built using Langchain and powered by gpt-4o-mini. It uses Tavily Search Engine to search the web.
+
+### Setup
+
+To set up the backend:
+
+1. Navigate to the `backend` directory:
+   ```
+   cd backend
+   ```
+
+2. Create a virtual environment and install dependencies:
+   ```
+   python3 -m venv venv
+   source venv/bin/activate
+   pip install -r requirements.txt
+   ```
+
+3. Set the environment variables:
+   ```
+   cp env.example .env
+   ```
+
+3. Run the FastAPI server:
+   ```
+   uvicorn server:app --reload
+   ```
 
 ## Contributing
 
-We welcome contributions to OpenSearch! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on how to submit pull requests, report issues, and suggest improvements.
+We welcome contributions to OpenSearch AI! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on how to submit pull requests, report issues, and suggest improvements.
 
 ## License
 
@@ -49,6 +75,9 @@ This project is licensed under the [MIT License](LICENSE).
 ## Contact
 
 For any questions or concerns, please open an issue in this repository or contact the project maintainers.
+
+- [Raihan Khan](https://raihankhan.dev/links)
+- [Sayak Sarkar](https://sayaksarkar.dev/)
 
 ---
 
