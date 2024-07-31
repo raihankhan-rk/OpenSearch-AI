@@ -72,7 +72,7 @@ export default function Home() {
   if(loading) return (
     <main className="w-screen min-h-screen bg-gradient-to-br from-[#1a1a1a] to-black max-md:pb-20">
       <div className="flex flex-row gap-5 items-center justify-between max-md:flex-col w-[90%] mx-auto py-5">
-        <h1 onClick={()=>{setSearchQuery(''); setSearchResults(null); setShowMore(false)}} className=" cursor-pointer text-2xl font-bold text-white max-md:text-xl max-md:mt-10 "> OpenSearch AI </h1>
+        <h1 onClick={()=>{setSearchQuery(''); setSearchResults(null); setShowMore(false)}} className=" cursor-pointer text-4xl font-bold text-white max-md:text-2xl max-md:mt-10 "> OpenSearch AI </h1>
       <form onSubmit={handleSubmit} className="w-fit h-fit relative md:w-[50%] max-md:w-[95%] max-md:mt-0 ">
           <input type="text" value={searchQuery} onChange={(event)=>{
             setSearchQuery(event.target.value);
@@ -134,7 +134,7 @@ export default function Home() {
           Sign Out
       </button>
       <div className="w-screen h-screen flex flex-col items-center justify-center">
-      <h1 onClick={()=>{setSearchQuery(''); setSearchResults(null); setShowMore(false);}} className=" cursor-pointer text-2xl font-bold text-white max-md:text-xl max-md:mt-10 "> OpenSearch AI </h1>
+      <h1 onClick={()=>{setSearchQuery(''); setSearchResults(null); setShowMore(false);}} className=" cursor-pointer text-4xl font-bold text-white max-md:text-2xl max-md:mt-10 "> OpenSearch AI </h1>
       <form onSubmit={handleSubmit} className="w-fit h-fit relative md:w-[50%] max-md:w-[95%] max-md:mt-10  mt-10">
           <input type="text" onChange={(event)=>{
             setSearchQuery(event.target.value);
@@ -150,7 +150,7 @@ export default function Home() {
   return (
     <main className="w-screen min-h-screen bg-gradient-to-br from-[#1a1a1a] to-black max-md:pb-20">
       <div className="flex flex-row gap-5 items-center justify-between max-md:flex-col w-[90%] mx-auto py-5">
-        <h1 onClick={()=>{setSearchQuery(''); setSearchResults(null); setShowMore(false)}} className=" cursor-pointer text-2xl font-bold text-white max-md:text-xl max-md:mt-10 "> OpenSearch AI </h1>
+        <h1 onClick={()=>{setSearchQuery(''); setSearchResults(null); setShowMore(false)}} className=" cursor-pointer text-4xl font-bold text-white max-md:text-2xl max-md:mt-10 "> OpenSearch AI </h1>
       <form onSubmit={handleSubmit} className="w-fit h-fit relative md:w-[50%] max-md:w-[95%] max-md:mt-0 ">
           <input type="text" value={searchQuery} onChange={(event)=>{
             setSearchQuery(event.target.value);
