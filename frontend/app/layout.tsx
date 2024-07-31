@@ -5,7 +5,7 @@ import Providers from "@/utils/provider/Providers"
 import { poppins } from "@/utils/font";
 
 export const metadata: Metadata = {
-  title: "SearchGPT",
+  title: "OpenSearch",
   description: "Search boosted by the power of AI",
 };
 
