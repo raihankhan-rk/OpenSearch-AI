@@ -14,7 +14,7 @@ export async function POST(req : NextRequest) {
           {
             headers: {
               'Content-Type': 'application/json',
-              'api-key': 'HellYeaH'
+              'api-key': process.env.RK_API_KEY
             }
           });
           console.log(response.data);
