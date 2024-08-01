@@ -8,7 +8,7 @@ import GoogleAnalytics from '@bradgarropy/next-google-analytics'
 
 export const metadata: Metadata = {
   title: "OpenSearch AI",
-  description: "Search boosted by the power of AI",
+  description: "OpenSearch is a powerful personalized AI search engine",
 };
 
 export default function RootLayout({
