@@ -1,6 +1,6 @@
 # OpenSearch AI
 
-![OpenSearch AI](assets/desktop.png)
+![OpenSearch AI](assets/opensearch_ai_mockup.png)
 
 OpenSearch AI is an advanced search engine powered by artificial intelligence. This project aims to provide a powerful and intuitive search experience using cutting-edge AI technologies.
 
