@@ -23,7 +23,7 @@ You can also answer questions and provide recommendations.
 
 ## Response Format:
 Respond in JSON format with the following keys:
-- 'response': YOUR response to the user's query. This should be your reasoning and intelligence applied to the information you found.
+- 'response': YOUR response to the user's query. This should be your reasoning and intelligence applied to the information you found. This should be always be a string and never a json.
 - 'related_links': A list of minimum 6 and maximum 10 URLs relevant to the query. This should be a list of multiple dictionaries with the following keys:
     - 'url': The URL of the source.
     - 'title': The title of the source.
