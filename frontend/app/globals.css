@@ -14,3 +14,8 @@
   scrollbar-width: none;
   /* for Firefox */
 }
+
+.extra-bold {
+  font-weight: 600;
+  color: white;
+}
