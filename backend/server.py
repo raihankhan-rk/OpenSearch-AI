@@ -27,8 +27,8 @@ app = FastAPI()
 load_dotenv()
 
 origins = ["http://localhost:3000",
-           "https://opensearch-ten.vercel.app",
-           "https://opensearch-ten.vercel.app/",
+           os.getenv("FRONTEND_URL"),
+           os.getenv("FRONTEND_URL") + "/",
            "http://localhost:3000/"
            ]
 
