@@ -4,6 +4,8 @@
 
 OpenSearch AI is an advanced search engine powered by artificial intelligence. This project aims to provide a powerful and intuitive search experience using cutting-edge AI technologies.
 
+Live Demo: [https://opensearchai.live/](hhttps://opensearchai.live/)
+
 ## Project Structure
 
 The repository is organized into two main folders:
