@@ -130,7 +130,7 @@ export default function Home() {
   return (
     <main className="w-screen min-h-screen bg-gradient-to-br from-[#1a1a1a] to-black max-md:pb-20">
       <BackgroundBeams className=" w-full "/>
-      <a href="https://github.com/raihankhan-rk/OpenSearch AI" target="_blank" className=" cursor-pointer absolute top-5 left-5 bg-white/5 backdrop-blur-sm border-[1px] text-gray-400 hover:text-white border-white/20 duration-200 hover:bg-white/10 hover:border-white/50 rounded-lg px-3 py-2 text-sm flex flex-row gap-3 items-center justify-center ">
+      <a href="https://github.com/raihankhan-rk/OpenSearch-AI" target="_blank" className=" cursor-pointer absolute top-5 left-5 bg-white/5 backdrop-blur-sm border-[1px] text-gray-400 hover:text-white border-white/20 duration-200 hover:bg-white/10 hover:border-white/50 rounded-lg px-3 py-2 text-sm flex flex-row gap-3 items-center justify-center ">
         <FaGithub className=" text-white text-3xl" /> <h3>Open Source</h3>
       </a>
       <button onClick={()=>{signOut(); localStorage.clear(); router.push('/');}} className=" absolute top-5 right-5 bg-white/5 backdrop-blur-sm border-[1px] text-gray-400 hover:text-white border-white/20 duration-200 hover:bg-white/10 hover:border-white/50 rounded-lg px-3 py-2 text-sm flex flex-row gap-3 items-center justify-center ">
