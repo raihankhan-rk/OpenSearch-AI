@@ -7,7 +7,7 @@ export async function POST(req : NextRequest) {
     try{
         const body = await req.json();
         const { query, user } = body;
-        const response = await axios.post('https://opensearch-ai-production.up.railway.app/api/search', {
+        const response = await axios.post(`${process.env.RK_BACKEND_URL}`, {
             query: query,
             user: user
           },
@@ -17,10 +17,10 @@ export async function POST(req : NextRequest) {
               'api-key': process.env.RK_API_KEY
             }
           });
-          console.log(response.data);
         return new NextResponse(JSON.stringify(response.data), { status: 200 });
     }
     catch(err:any){
+      console.log(err);
         return new NextResponse(JSON.stringify(err), { status: 500 });
     }    
 }

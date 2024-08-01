@@ -5,7 +5,7 @@ import Image from "next/image";
 import { signIn, signOut, useSession } from 'next-auth/react'
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import axios from "axios";
+import ReactGA from "react-ga4";
 
 export default function Home() {
 
@@ -21,6 +21,8 @@ export default function Home() {
       router.push('/search')
     }
   },[session])
+
+  ReactGA.send({ hitType: "pageview", page: "/", title: "homepage", user: session?.user?.email || 'guest' });
 
   return (
     <main className="w-screen h-screen bg-gradient-to-br from-[#1a1a1a] to-black">
