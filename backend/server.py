@@ -24,11 +24,10 @@ from db import log_query_async, log_response_async
 app = FastAPI()
 load_dotenv()
 
-origins = ["http://localhost:3000",
-           "https://opensearchai.live",
-           "https://opensearchai.live/",
-           "http://localhost:3000/"
-           ]
+origins = [
+    "https://opensearchai.live",
+    "https://opensearchai.live/",
+]
 
 app.add_middleware(
     CORSMiddleware,
@@ -42,19 +41,24 @@ app.add_middleware(
 API_KEY = os.environ.get("API_KEY")
 
 # Dependency for API Key Authentication
+
+
 async def verify_api_key(api_key: str = Header()):
     if api_key != API_KEY:
         raise HTTPException(
             status_code=401, detail="Invalid or missing API key")
 
+
 class SearchRequest(BaseModel):
     query: str
     user: str  # Add user field
+
 
 class RelatedLink(BaseModel):
     url: str
     title: str
     snippet: str
+
 
 class SearchResponse(BaseModel):
     status_code: int
@@ -65,6 +69,7 @@ class SearchResponse(BaseModel):
     model: str
     timestamp: str
     time_taken: float
+
 
 llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.7)
 search = TavilySearchResults()
@@ -99,16 +104,20 @@ agent = (
 
 agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
 
+
 @app.get("/ping")
 async def ping():
     return {"message": "Pong"}
+
 
 @app.get("/health")
 async def health_check():
     return {"status": "OK"}
 
+
 async def run_agent(query: str):
     return await agent_executor.ainvoke({"input": query})
+
 
 @app.post("/api/search", dependencies=[Depends(verify_api_key)], response_model=SearchResponse)
 async def search(req: SearchRequest, background_tasks: BackgroundTasks):
@@ -119,7 +128,7 @@ async def search(req: SearchRequest, background_tasks: BackgroundTasks):
         # Run agent and get image URLs concurrently
         agent_task = asyncio.create_task(run_agent(query))
         image_urls_task = asyncio.create_task(get_image_urls_async(query))
-        
+
         now = time.time()
         result, image_urls = await asyncio.gather(agent_task, image_urls_task)
 
@@ -148,10 +157,11 @@ async def search(req: SearchRequest, background_tasks: BackgroundTasks):
             time_taken=time.time() - now
         )
         print(f"Response: {response}")
-        
+
         # Log query and response asynchronously
         background_tasks.add_task(log_query_async, user, query, timestamp)
-        background_tasks.add_task(log_response_async, user, query, response_text, [link.dict() for link in related_links], image_urls[1:], timestamp)
+        background_tasks.add_task(log_response_async, user, query, response_text, [
+                                  link.dict() for link in related_links], image_urls[1:], timestamp)
 
         return response
     except Exception as e:
