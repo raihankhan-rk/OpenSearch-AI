@@ -30,11 +30,9 @@ export default function Home() {
         email: session?.user?.email,
         image: session?.user?.image
       });
-      console.log("res: ", response);
       localStorage.setItem('registered', JSON.stringify(true));
     }
     catch(err:any){
-      console.log("err: ", err.response);
       if(err.response.data.error === 'Already registered'){
         localStorage.setItem('registered', JSON.stringify(true));
       }
@@ -43,9 +41,8 @@ export default function Home() {
 
   useEffect(()=>{
     if(session){
-      console.log("loc:", localStorage.getItem('registered'));
       if(localStorage.getItem('registered')) return;
-      registerUser();
+      // registerUser();
     }
     else{
       router.push('/')
@@ -62,12 +59,10 @@ export default function Home() {
         query: searchQuery,
         user: session?.user?.email
       });
-      console.log("res: ", response.data);
       setSearchResults(response.data);
       setLoading(false);
     }
     catch(err:any){
-      console.log("err: ", err.response);
       setLoading(false);
     }
   }

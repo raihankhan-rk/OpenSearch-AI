@@ -9,7 +9,11 @@ const UserSchema = new Schema({
     },
     image: {
         type: String,
-    }
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    },
   }, {collection: "users"})
 
   const User = models.User || model('User', UserSchema);
