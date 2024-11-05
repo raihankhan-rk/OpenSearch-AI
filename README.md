@@ -52,11 +52,19 @@ To set up the backend:
    ```
 
 2. Create a virtual environment and install dependencies:
+    - for mac/linux :
    ```
    python3 -m venv venv
    source venv/bin/activate
    pip install -r requirements.txt
    ```
+   - for windows:
+   ```
+   python3 -m venv venv
+   source venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
+
 
 3. Set the environment variables:
    ```
